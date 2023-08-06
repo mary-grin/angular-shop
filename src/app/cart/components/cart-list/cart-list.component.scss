@@ -1,0 +1,20 @@
+.cart {
+  &__title,
+  &__no-product {
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: 10px;
+  }
+
+  &__line {
+    border-top: 1px dashed #ccc;
+    margin: 10px 0;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+  }
+}

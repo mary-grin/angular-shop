@@ -1,0 +1,7 @@
+<div class="product-list">
+  <h2 class="product-list__title">Product List</h2>
+  <app-product
+    *ngFor="let product of products; trackBy: trackByItems"
+    [product]="product"
+  ></app-product>
+</div>

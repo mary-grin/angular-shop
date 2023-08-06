@@ -1,0 +1,13 @@
+<mat-card class="product-card">
+  <mat-card-header class="product-card__header">
+    <mat-card-title class="product-card__title">{{name}}</mat-card-title>
+    <mat-card-subtitle class="product-card__subtitle">{{description}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="product-card__content">
+    <div class="product-card__details">
+      <p class="product-card__category">{{category}}</p>
+      <p class="product-card__price">{{price}}$</p>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="!isAvailable" class="product-card__btn">Buy</button>
+  </mat-card-content>
+</mat-card>

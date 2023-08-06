@@ -1,0 +1,17 @@
+<section class="cart">
+  <h2 class="cart__title">Your Cart</h2>
+  <div class="cart__content">
+    <ng-container *ngIf="cartService.cartItems.length; else noproduct">
+      <app-cart-item *ngFor="let cartItem of cartService.cartItems; trackBy: trackByItems" [cartItem]="cartItem"></app-cart-item>
+      <div class="cart__line"></div>
+      <div class="cart__total">
+        <p>Total price</p>
+        <p>{{cartService.totalPrice}}$</p>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+<ng-template #noproduct>
+  <p class="cart__no-product">There is no product in your cart yet:(</p>
+</ng-template>

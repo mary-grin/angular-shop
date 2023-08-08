@@ -11,3 +11,5 @@ All notable changes to the project will be documented in this file.
 - Ability to view details of each product.
 - Ability to add products to the shopping cart.
 - Calculation of the total price in the cart.
+
+<!-- ok -->

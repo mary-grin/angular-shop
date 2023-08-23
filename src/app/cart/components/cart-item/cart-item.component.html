@@ -1,5 +1,17 @@
 <div class="cart-item">
   <p class="cart-item__name">{{cartItem.name}}</p>
-  <p class="cart-item__amount">x{{cartItem.amount}}</p>
-  <p class="cart-item__price">{{cartItem.price}}$</p>
+  <p class="cart-item__amount">
+    <button
+      (click)="onQuantityIncrease.emit(cartItem)"
+    >+</button>
+    x{{cartItem.amount}}
+    <button
+      (click)="onQuantityDecrease.emit(cartItem)"
+      [disabled]="cartItem.amount === 1"
+    >-</button>
+  </p>
+  <p class="cart-item__price">{{cartItem.price * cartItem.amount}}$</p>
+  <button mat-icon-button color="primary" class="cart-item__delete" (click)="onDeleteItem.emit(cartItem.name)">
+    <mat-icon>delete</mat-icon>
+  </button>
 </div>

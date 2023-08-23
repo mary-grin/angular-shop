@@ -4,10 +4,6 @@
     text-align: center;
   }
 
-  &__content {
-    padding-top: 10px;
-  }
-
   &__line {
     border-top: 1px dashed #ccc;
     margin: 10px 0;
@@ -16,5 +12,21 @@
   &__total {
     display: flex;
     justify-content: space-between;
+  }
+
+  .total {
+    &__title {
+      width: 40%;
+    }
+
+    &__amount {
+      width: 40%;
+      text-align: center;
+    }
+
+    &__price {
+      width: 20%;
+      text-align: end;
+    }
   }
 }

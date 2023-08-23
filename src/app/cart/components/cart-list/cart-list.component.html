@@ -2,11 +2,18 @@
   <h2 class="cart__title">Your Cart</h2>
   <div class="cart__content">
     <ng-container *ngIf="cartService.cartItems.length; else noproduct">
-      <app-cart-item *ngFor="let cartItem of cartService.cartItems; trackBy: trackByItems" [cartItem]="cartItem"></app-cart-item>
+      <app-cart-item
+        *ngFor="let cartItem of cartService.cartItems; trackBy: trackByItems"
+        [cartItem]="cartItem"
+        (onQuantityIncrease)="onQuantityIncrease($event)"
+        (onQuantityDecrease)="onQuantityDecrease($event)"
+        (onDeleteItem)="onDeleteItem($event)"
+      ></app-cart-item>
       <div class="cart__line"></div>
       <div class="cart__total">
-        <p>Total price</p>
-        <p>{{cartService.totalPrice}}$</p>
+        <p class="total__title">Total</p>
+        <p class="total__amount">x{{cartService.totalAmount()}}</p>
+        <p class="total__price">{{cartService.totalPrice()}}$</p>
       </div>
     </ng-container>
   </div>

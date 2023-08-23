@@ -1,4 +1,4 @@
-<mat-card class="product-card">
+<mat-card class="product-card" appHighlight [isProductDisabled]="!product.isAvailable" [class.product-card--disabled]="!product.isAvailable">
   <mat-card-header class="product-card__header">
     <mat-card-title class="product-card__title">{{product.name}}</mat-card-title>
     <mat-card-subtitle class="product-card__subtitle">{{product.description}}</mat-card-subtitle>
@@ -12,8 +12,8 @@
       mat-raised-button
       color="primary"
       [disabled]="!product.isAvailable"
-      class="product-card__btn"c
-      (click)="onAddToCard()"
+      class="product-card__btn"
+      (click)="onAddToCart.emit(product)"
     >Buy
     </button>
   </mat-card-content>

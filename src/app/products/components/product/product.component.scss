@@ -1,6 +1,13 @@
 .product-card {
+  cursor: pointer;
+
   &__details {
     display: flex;
     justify-content: space-between;
+  }
+
+  &--disabled {
+    background-color: #e8e8e8;
+    cursor: not-allowed;
   }
 }

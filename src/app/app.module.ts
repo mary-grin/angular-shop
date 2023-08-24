@@ -22,3 +22,4 @@ import {CartListComponent} from "./cart/components/cart-list/cart-list.component
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// ok
